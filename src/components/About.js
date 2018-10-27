@@ -6,15 +6,15 @@ const Container = styled.div`
 	
 `
 
-class Home extends React.Component {
+class About extends React.Component {
 	render() {
 		return(
 			<Container>
-				Home
-				<Link to='/about'>Go to About</Link>
+				About
+				<Link to='/'>Go to Home</Link>
 			</Container>
 		)
 	}
 }
 
-export default Home
+export default About

@@ -1,10 +1,11 @@
 import React from 'react'
-import { HashRouter, Route } from 'react-router-dom'
+import { HashRouter, Route, Switch } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import styled from 'styled-components'
 
 import GlobalStyles from '../styles'
 import Home from './Home'
+import About from './About'
 
 const Container = styled.div`
 	height: 100vh;
@@ -16,7 +17,10 @@ export default props => (
 		<GlobalStyles/>
 		<Provider store={{}}>
 			<HashRouter>
-				<Route exact path='/' component={ Home }/>
+				<Switch>
+					<Route exact path='/' component={ Home }/>
+					<Route exact path='/about' component={ About }/>
+				</Switch>
 			</HashRouter>
 		</Provider>
 	</Container>
