@@ -1,4 +1,4 @@
-# Story Cubes
+# Storytelling Cubes
 Useful for:
 * Storytelling
 * Learn to create stories
