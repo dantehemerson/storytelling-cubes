@@ -33,7 +33,7 @@ class Home extends React.Component {
 
 	render() {
 		return(
-			<Container>							
+			<Container>								
 				<Divisor>
 					<Dropdown
 						onSelect={ this.handleSelectDropdown }
