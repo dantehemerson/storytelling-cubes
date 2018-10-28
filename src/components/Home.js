@@ -5,11 +5,13 @@ import styled from 'styled-components'
 import Dropdown from './Dropdown'
 import Toolbar from './Toolbar'
 import Table from './Table'
+import Logo from './Logo'
 
 const Container = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 	padding: 0 15px;
 	height: 100%;
 `
@@ -33,7 +35,8 @@ class Home extends React.Component {
 
 	render() {
 		return(
-			<Container>								
+			<Container>
+				<Logo/>								
 				<Divisor>
 					<Dropdown
 						onSelect={ this.handleSelectDropdown }

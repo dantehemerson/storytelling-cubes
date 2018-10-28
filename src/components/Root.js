@@ -2,11 +2,13 @@ import React from 'react'
 import { HashRouter, Route, Switch } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import styled from 'styled-components'
-import { slide as Menu } from 'react-burger-menu'
+import { push as Menu } from 'react-burger-menu'
 
 import GlobalStyles from '../styles'
 import Home from './Home'
 import About from './About'
+import MenuClose from '../assets/icons/menu_close.svg'
+import MenuOpen from '../assets/icons/menu_open.svg'
 
 const Container = styled.div`
 	height: 100vh;
@@ -21,7 +23,10 @@ export default props => (
 	<Container id='global-container'>
 		<Menu 			
 			right
-			width={ 280 }
+			isOpen
+			customBurgerIcon={ <img src={MenuOpen}/>}
+			customCrossIcon={ <img src={MenuClose}/>}
+			width={ '100%' }
 			pageWrapId={'page-main'} 
 			outerContainerId={'global-container'}>
 	        <a id="home" className="menu-item" href="/">Home</a>

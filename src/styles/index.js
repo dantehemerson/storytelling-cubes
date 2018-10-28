@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
+const buttonSize = '42px';
+
 export default createGlobalStyle`
 	* {
 		margin: 0;
@@ -24,41 +26,40 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
-  /* Position and sizing of burger button */
+  // BURGER MENU CUSTOM STYLES  
   .bm-burger-button {
     position: fixed;
-    width: 36px;
-    height: 30px;
-    right: 36px;
-    top: 36px;
-  }
-
-  /* Color/shape of burger icon bars */
-  .bm-burger-bars {
-    background: white;
-  }
-
-  /* Position and sizing of clickable cross button */
+    width: ${buttonSize};    
+    height: ${buttonSize};
+    right: ${buttonSize};
+    top: ${buttonSize};
+    transition: .3s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }  
+  
   .bm-cross-button {
-    height: 24px;
-    width: 24px;
-  }
-
-  /* Color/shape of close button cross */
-  .bm-cross {
-    background: #bdc3c7;
+    height: ${buttonSize} !important;
+    width: ${buttonSize} !important;
+    top: ${buttonSize} !important;
+    right: ${buttonSize} !important;
+    transition: .3s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   /* General sidebar styles */
   .bm-menu {
-    background: #373a47;
+    background: #192c56;
     padding: 2.5em 1.5em 0;
     font-size: 1.15em;
   }
 
   /* Morph shape necessary with bubble or elastic */
   .bm-morph-shape {
-    fill: #373a47;
+    fill: #192c56;
   }
 
   /* Wrapper for item list */
@@ -71,9 +72,8 @@ export default createGlobalStyle`
   .bm-item {
     display: inline-block;
   }
-
-  /* Styling of overlay */
+  
   .bm-overlay {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);    
   }
 `
