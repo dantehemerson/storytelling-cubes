@@ -49,11 +49,11 @@ class Dropdown extends React.Component {
 		})
 	}
 
-	selectItem = (title, id, stateKey) => {
+	selectItem = (item) => {
 		this.setState({
-			title,
+			title: item.title,
 			open: false
-		})
+		}, this.props.onSelect(item))
 	}
 
 	toggleList = () => {
@@ -63,8 +63,7 @@ class Dropdown extends React.Component {
 	}
 
 	render() {
-		const { list } = this.props
-		console.log(this.state.open)
+		const { list } = this.props		
 		return (
 			<Wrapper>
 				<Header onClick={ this.toggleList }>
@@ -76,8 +75,10 @@ class Dropdown extends React.Component {
 						{
 							list.map(item => 
 								<Item 
-									onClick={ () => this.selectItem(item.title, item.id, item.key) }
-									key={ item.id }>{ item.title }</Item>)							
+									onClick={ () => this.selectItem(item) }
+									key={ item.id }>
+									{ item.title }
+								</Item>)
 						}
 					</List>
 				}
