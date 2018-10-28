@@ -5,6 +5,7 @@ import onClickOutside from 'react-onclickoutside'
 const Wrapper = styled.div`	
 	color: #333;
 	cursor: pointer;
+	position: relative;
 	text-transform: uppercase;
 `
 
@@ -15,19 +16,22 @@ const Header = styled.div`
 	border-radius: 8px;
 	background: white;
 	align-items: center;
+	justify-content: space-between;
 	padding: 0 10px;
 	overflow: hidden;
 	margin-bottom: 4px;
 	border: 1px solid #dedede;
 `
 
-const Title = styled.h4`
+const Title = styled.p`
 `
 
 const List = styled.ul`
 	background: white;
+	width: 100%;
 	border-radius: 8px;
 	overflow: hidden;
+	position: absolute;
 `
 
 const Item = styled.li`
@@ -68,6 +72,7 @@ class Dropdown extends React.Component {
 			<Wrapper>
 				<Header onClick={ this.toggleList }>
 					<Title>{ this.state.title }</Title>
+					<img alt='Arrow icon' src='https://icongr.am/feather/chevron-down.svg'/>
 				</Header>
 				{
 					this.state.open &&

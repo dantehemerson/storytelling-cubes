@@ -13,7 +13,8 @@ export default createGlobalStyle`
                                     supported by Chrome and Opera */
 	}
   body {
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
     color: white;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;

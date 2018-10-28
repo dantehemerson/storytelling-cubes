@@ -3,32 +3,37 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import Dropdown from './Dropdown'
+import Toolbar from './Toolbar'
+import Table from './Table'
 
 const Container = styled.div`
-	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 15px;
+	height: 100%;
 `
 
 const Divisor = styled.div`
-	max-width: 300px;
-	margin: 100px auto;
+	max-width: 500px;
+	width: 100%;
+	height: auto;
 `
 
 class Home extends React.Component {
 	state = {
-		item: 'hoa'
+		itemSelected: 'hoa'
 	}
 
 	handleSelectDropdown = (item) => {
-		console.log('Seleccionado')
-		console.log(item)
+		this.setState({
+			itemSelected: item.title
+		})
 	}
 
 	render() {
 		return(
-			<Container>
-				Home
-				<Link to='/about'>Go to About</Link>
-				<hr/>
+			<Container>							
 				<Divisor>
 					<Dropdown
 						onSelect={ this.handleSelectDropdown }
@@ -37,7 +42,9 @@ class Home extends React.Component {
 							{ id: 2, title: 'Item2', key: 'item2' },
 							{ id: 4, title: 'Item4', key: 'item4' },
 							{ id: 3, title: 'Item3', key: 'item3' }
-						]}/>
+						]}/>					
+					<Table/>
+					<Toolbar/>
 				</Divisor>
 			</Container>
 		)
