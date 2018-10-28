@@ -49,6 +49,13 @@ class Dropdown extends React.Component {
 		})
 	}
 
+	selectItem = (title, id, stateKey) => {
+		this.setState({
+			title,
+			open: false
+		})
+	}
+
 	toggleList = () => {
 		this.setState(prevState => ({
 			open: !prevState.open
@@ -68,7 +75,9 @@ class Dropdown extends React.Component {
 					<List>
 						{
 							list.map(item => 
-								<Item key={ item.id }>{ item.title }</Item>)							
+								<Item 
+									onClick={ () => this.selectItem(item.title, item.id, item.key) }
+									key={ item.id }>{ item.title }</Item>)							
 						}
 					</List>
 				}

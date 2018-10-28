@@ -23,10 +23,10 @@ class Home extends React.Component {
 				<Divisor>
 					<Dropdown
 						list={[
-							{ id: 1, title: 'Item1' },
-							{ id: 2, title: 'Item2' },
-							{ id: 4, title: 'Item4' },
-							{ id: 3, title: 'Item3' }
+							{ id: 1, title: 'Item1', key: 'item1' },
+							{ id: 2, title: 'Item2', key: 'item2' },
+							{ id: 4, title: 'Item4', key: 'item4' },
+							{ id: 3, title: 'Item3', key: 'item3' }
 						]}/>
 				</Divisor>
 			</Container>
