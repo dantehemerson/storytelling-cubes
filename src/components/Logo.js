@@ -8,6 +8,6 @@ const Container = styled.div`
 
 export default () => (
 	<Container>
-		<img src={logo}/>
+		<img alt='Storytelling Cubes' src={logo}/>
 	</Container>
 )

@@ -24,8 +24,8 @@ export default props => (
 		<Menu 			
 			right
 			isOpen
-			customBurgerIcon={ <img src={MenuOpen}/>}
-			customCrossIcon={ <img src={MenuClose}/>}
+			customBurgerIcon={ <img alt='Menu Open' src={MenuOpen}/>}
+			customCrossIcon={ <img alt='Menu Close' src={MenuClose}/>}
 			width={ '100%' }
 			pageWrapId={'page-main'} 
 			outerContainerId={'global-container'}>

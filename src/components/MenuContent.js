@@ -43,7 +43,7 @@ const CategoryWrapper = styled.div`
 
 const LogoWrapper = styled.div`
 	text-align: center;
-	padding: 35px 0 35px;
+	padding: 35px 0 55px;
 `
 
 const Info = styled.p`
@@ -106,7 +106,7 @@ class MenuContent extends React.Component {
 			}}>
 				<LogoWrapper>
 					<Logo/>
-					<Info>Made with <span className='heart'>❤</span> by <a target='__blank' href='https://dantecalderon.com'>@dantehemerson</a>. Fork me on <a target='__blank' href='https://github.com/dantehemerson/storytelling-cubes'>Github</a></Info>
+					<Info>Made with <span className='heart'>❤</span> by <a target='__blank' href='https://dantecalderon.com'>@dantehemerson</a>. Fork me on <a target='__blank' href='https://github.com/dantehemerson/storytelling-cubes'>Github</a>.</Info>
 				</LogoWrapper>
 				<Section>		
 					<Subtitle>Cubes</Subtitle>
