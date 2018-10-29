@@ -43,77 +43,9 @@ const CategoryWrapper = styled.div`
 
 const LogoWrapper = styled.div`
 	text-align: center;
-	padding-top: 35px;
+	padding: 35px 0 35px;
 `
 const categories = [
-	{
-		title: 'General',
-		color: '#f5bf27'
-	},
-	{
-		title: 'General',
-		color: '#f5bf27'
-	},
-	{
-		title: 'General',
-		color: '#f5bf27'
-	},
-	{
-		title: 'General',
-		color: '#f5bf27'
-	},
-	{
-		title: 'General',
-		color: '#f5bf27'
-	},
-	{
-		title: 'General',
-		color: '#f5bf27'
-	},
-	{
-		title: 'General',
-		color: '#f5bf27'
-	},
-	{
-		title: 'General',
-		color: '#f5bf27'
-	},
-	{
-		title: 'General',
-		color: '#f5bf27'
-	},
-	{
-		title: 'General',
-		color: '#f5bf27'
-	},
-	{
-		title: 'General',
-		color: '#f5bf27'
-	},
-	{
-		title: 'General',
-		color: '#f5bf27'
-	},
-	{
-		title: 'General',
-		color: '#f5bf27'
-	},
-	{
-		title: 'General',
-		color: '#f5bf27'
-	},
-	{
-		title: 'General',
-		color: '#f5bf27'
-	},
-	{
-		title: 'General',
-		color: '#f5bf27'
-	},
-	{
-		title: 'General',
-		color: '#f5bf27'
-	},
 	{
 		title: 'General',
 		color: '#f5bf27'

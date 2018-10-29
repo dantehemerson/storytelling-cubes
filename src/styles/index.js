@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { media } from './utils'
 
 const config = {
   buttonSize: '42px',
@@ -33,8 +34,14 @@ export default createGlobalStyle`
     position: fixed;
     width: ${config.buttonSize};    
     height: ${config.buttonSize};
-    right: ${config.buttonSize};
-    top: ${config.buttonSize};
+    right: 20px;
+    top: 20px;
+    background: #192c56;
+    border-radius: 50%;
+    ${media.tablet`
+      top: ${config.buttonSize};
+      right: ${config.buttonSize};
+    `}
     transition: .3s;
     &:hover {
       transform: scale(1.1);
@@ -44,8 +51,14 @@ export default createGlobalStyle`
   .bm-cross-button {
     height: ${config.buttonSize} !important;
     width: ${config.buttonSize} !important;
-    top: ${config.buttonSize} !important;
-    right: ${config.buttonSize} !important;
+    top: 20px !important;
+    right: 20px !important;
+    background: #192c56;
+    border-radius: 50%;
+    ${media.tablet`
+      top: ${config.buttonSize} !important;
+      right: ${config.buttonSize} !important;
+    `}
     transition: .3s;
     &:hover {
       transform: scale(1.1);
@@ -80,7 +93,7 @@ export default createGlobalStyle`
   }
   
   .bm-overlay {
-    background: rgba(0, 0, 0, 0.4);    
+    background: rgba(0, 0, 0, .1);    
   }
 
 
