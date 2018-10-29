@@ -1,16 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import squareImg from '../assets/images/square.png'
 
 const Container = styled.div`
-	width: 100%;
-	height: 400px;
+	width: 100%;	
 	border-radius: 10px;
 	background: #0e1d3e;
+
+	img {
+		border: 1px solid red;
+		width: 100%;		
+		background: yellow;
+	}
 `
 
 export default props => (
 	<Container>
-		CONTENDOR
+		<img alt='Table' src={squareImg}/>
 	</Container>
 )

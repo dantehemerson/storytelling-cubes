@@ -17,7 +17,7 @@ const Container = styled.div`
 const Divisor = styled.div`
 	max-width: 500px;
 	width: 100%;
-	height: auto;
+	display: flex;
 `
 
 const LogoWrapper = styled.div`
@@ -28,7 +28,7 @@ const ToolbarWrapper = styled.div`
 	max-width: 300px;
 	width: 100%;
 	height: auto;
-	padding-bottom: 40px;
+	padding-bottom: 10px;
 `
 class Home extends React.Component {
 	render() {
