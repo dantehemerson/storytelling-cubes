@@ -9,6 +9,7 @@ import Home from './Home'
 import About from './About'
 import MenuClose from '../assets/icons/menu_close.svg'
 import MenuOpen from '../assets/icons/menu_open.svg'
+import MenuContent from './MenuContent'
 
 const Container = styled.div`
 	height: 100vh;
@@ -29,9 +30,7 @@ export default props => (
 			width={ '100%' }
 			pageWrapId={'page-main'} 
 			outerContainerId={'global-container'}>
-	        <a id="home" className="menu-item" href="/">Home</a>
-	        <a id="about" className="menu-item" href="/about">About</a>
-	        <a id="contact" className="menu-item" href="/contact">Contact</a>
+	    <MenuContent/>
     </Menu>	
 		<GlobalStyles/>
 		<PageWrapper id='page-main'>
