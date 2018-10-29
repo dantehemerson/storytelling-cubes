@@ -7,9 +7,8 @@ const Container = styled.div`
 	width: 100%;	
 	border-radius: 10px;
 	background: #0e1d3e;
-
-	img {
-		border: 1px solid red;
+	display: grid;
+	img {		
 		width: 100%;		
 		background: yellow;
 	}

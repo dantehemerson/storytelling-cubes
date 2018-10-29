@@ -119,7 +119,10 @@ class MenuContent extends React.Component {
 					<Subtitle>Categories</Subtitle>
 					<CategoriesWrapper>
 						{
-							categories.map((item, id) => <CategoryWrapper><Category {...item}/></CategoryWrapper>)
+							categories.map((item, id) => 
+								<CategoryWrapper key={id}>
+									<Category {...item}/>
+								</CategoryWrapper>)
 						}
 					</CategoriesWrapper>
 				</Section>

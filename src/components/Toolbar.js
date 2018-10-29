@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import DicesImage from '../assets/icons/dices.svg'
 import VolumeOn from '../assets/icons/volume.svg'
+import { mediaHeight } from '../styles/utils'
 
 const Container = styled.div`
 	background: #263c6b;	
@@ -14,6 +15,10 @@ const Items = styled.ul`
 	list-style: none;
 	display: flex;
 	justify-content: space-around;
+	flex-direction: column;
+	${mediaHeight.tablet`
+		flex-direction: row;
+	`}
 `
 
 const Item = styled.li`	
