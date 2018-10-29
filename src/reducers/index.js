@@ -2,14 +2,14 @@ import { combineReducers } from 'redux'
 
 import { cantityCubesActions } from '../actions'
 
-const cantityCubesReducer = (state=1, action) => {
+const cantityCubesReducer = (state=4, action) => {
 	if(action.type === cantityCubesActions.UPDATE) {
-		return action.value
+		return action.cantity
 	}
 	return state
 }
 
 
 export default combineReducers({
-	cantity: cantityCubesReducer
+	cantityCubes: cantityCubesReducer
 })

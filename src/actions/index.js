@@ -3,6 +3,6 @@ export const cantityCubesActions = {
 }
 
 export const updateCantityCubes = cantity => ({
-	type: cantityCubesActions.UPDATE_CANTITY,
+	type: cantityCubesActions.UPDATE,
 	cantity
 })

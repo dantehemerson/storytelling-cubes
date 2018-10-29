@@ -7,34 +7,24 @@ const Container = styled.div`
 `
 
 class Slider extends React.Component {
-	state = {
-	  value: 5
-	}
-	
 	handleChangeStart = () => {
 	  console.log('Change event started')
-	}
-
-	handleChange = value => {
-	  this.setState({
-	    value: value
-	  })
-	}
+	}	
 
 	handleChangeComplete = () => {
 	  console.log('Change event completed')
 	}
 
 	render() {
-		const { value } = this.state
 		return (
 			<Container>
 				<RangeSlider
 		      min={1}
 		      max={9}
-		      value={value}
+		      tooltip={false}
+		      value={this.props.value}
 		      onChangeStart={this.handleChangeStart}
-          onChange={this.handleChange}
+          onChange={this.props.handleChange}
           onChangeComplete={this.handleChangeComplete}/>
 			</Container>
 		) 

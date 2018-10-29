@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import styled from 'styled-components'
 import SimpleBar from 'simplebar-react'
 import 'simplebar/dist/simplebar.css'
@@ -7,6 +8,7 @@ import Slider from './Slider'
 import Category from './Category'
 import { media } from '../styles/utils'
 import Logo from './Logo'
+import { updateCantityCubes } from '../actions'
 
 const Subtitle = styled.h4`
 	color: white;
@@ -97,38 +99,51 @@ const categories = [
 	}
 ]
 
-class MenuContent extends React.Component {	
-	render() {
-		return (
-			<SimpleBar style={{
-				paddingRight: '14px',
-				paddingTop: '10px'				
-			}}>
-				<LogoWrapper>
-					<Logo/>
-					<Info>Made with <span className='heart'>❤</span> by <a target='__blank' href='https://dantecalderon.com'>@dantehemerson</a>. Fork me on <a target='__blank' href='https://github.com/dantehemerson/storytelling-cubes'>Github</a>.</Info>
-				</LogoWrapper>
-				<Section>		
-					<Subtitle>Cubes: 8</Subtitle>
-					<Slider/>
-				</Section>
-				<Section>				
-				</Section>
-				<Section 
-					width='900px'>
-					<Subtitle>Categories</Subtitle>
-					<CategoriesWrapper>
-						{
-							categories.map((item, id) => 
-								<CategoryWrapper key={id}>
-									<Category {...item}/>
-								</CategoryWrapper>)
-						}
-					</CategoriesWrapper>
-				</Section>
-			</SimpleBar>
-		)
+const MenuContent = props => (
+	<SimpleBar style={{
+		paddingRight: '14px',
+		paddingTop: '10px'				
+	}}>
+		<LogoWrapper>
+			<Logo/>
+			<Info>Made with <span className='heart'>❤</span> by <a target='__blank' href='https://dantecalderon.com'>@dantehemerson</a>. Fork me on <a target='__blank' href='https://github.com/dantehemerson/storytelling-cubes'>Github</a>.</Info>
+		</LogoWrapper>
+		<Section>		
+			<Subtitle>Cubes: {props.cantityCubes}</Subtitle>
+			<Slider 
+				handleChange={props.dispatchUpdateCantityCubes}
+				value={props.cantityCubes}/>
+		</Section>
+		<Section>				
+		</Section>
+		<Section 
+			width='900px'>
+			<Subtitle>Categories</Subtitle>
+			<CategoriesWrapper>
+				{
+					categories.map((item, id) => 
+						<CategoryWrapper key={id}>
+							<Category {...item}/>
+						</CategoryWrapper>)
+				}
+			</CategoriesWrapper>
+		</Section>		
+	</SimpleBar>
+)
+
+
+const mapStateToProps = state => {	
+	return {
+		cantityCubes: state.cantityCubes,		
 	}
 }
 
-export default MenuContent
+const mapDispatchToProps = dispatch => ({	
+	dispatchUpdateCantityCubes: value => dispatch(updateCantityCubes(value))
+})
+
+
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(MenuContent)

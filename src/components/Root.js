@@ -23,7 +23,7 @@ const PageWrapper = styled.main`
 export default props => (
 	<Provider store={ store }>
 		<Container id='global-container'>
-				<Menu 			
+			<Menu 			
 					right			
 					customBurgerIcon={ <img alt='Menu Open' src={MenuOpen}/>}
 					customCrossIcon={ <img alt='Menu Close' src={MenuClose}/>}
