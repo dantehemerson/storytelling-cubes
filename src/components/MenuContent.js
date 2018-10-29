@@ -20,6 +20,13 @@ const Section = styled.section`
 
 const CategoriesWrapper = styled.ul`
 	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+`
+
+const CategoryWrapper = styled.div`
+	width: 33.3333%;
+	padding: 5px;
 `
 
 const categories = [
@@ -71,7 +78,7 @@ export default props => (
 			<Subtitle>Categories</Subtitle>
 			<CategoriesWrapper>
 				{
-					categories.map((item, id) => <Category {...item}/>)
+					categories.map((item, id) => <CategoryWrapper><Category {...item}/></CategoryWrapper>)
 				}
 			</CategoriesWrapper>
 		</Section>
