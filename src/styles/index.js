@@ -24,10 +24,6 @@ export default createGlobalStyle`
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
   }
-  .pure-g, .pure-g [class*=pure-u] {  
-    font-family: 'Lato', sans-serif;
-    box-sizing: border-box;
-  }
 
   // BURGER MENU CUSTOM STYLES  
   .bm-burger-button {
@@ -67,9 +63,7 @@ export default createGlobalStyle`
 
   /* General sidebar styles */
   .bm-menu {
-    background: #192c56;
-    
-    font-size: 1.15em;
+    background: #192c56;    
     * {
       box-sizing: border-box;
     }
@@ -81,9 +75,7 @@ export default createGlobalStyle`
   }
 
   /* Wrapper for item list */
-  .bm-item-list {
-    color: #b8b7ad;
-    border: 1px solid black;
+  .bm-item-list {    
     padding-left: 14px;    
   }
 

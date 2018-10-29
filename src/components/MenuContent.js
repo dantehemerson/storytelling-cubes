@@ -45,6 +45,23 @@ const LogoWrapper = styled.div`
 	text-align: center;
 	padding: 35px 0 35px;
 `
+
+const Info = styled.p`
+	color: #556b9c;
+	font-size: 14px;
+	text-align: center;
+	a {
+		color: #7185B3;
+		text-decoration: none;
+		&:hover{
+			color: #738FCC;
+		}
+	}
+	.heart {
+		color: #C76767;
+	}
+`
+
 const categories = [
 	{
 		title: 'General',
@@ -89,6 +106,7 @@ class MenuContent extends React.Component {
 			}}>
 				<LogoWrapper>
 					<Logo/>
+					<Info>Made with <span className='heart'>❤</span> by <a target='__blank' href='https://dantecalderon.com'>@dantehemerson</a>. Fork me on <a target='__blank' href='https://github.com/dantehemerson/storytelling-cubes'>Github</a></Info>
 				</LogoWrapper>
 				<Section>		
 					<Subtitle>Cubes</Subtitle>

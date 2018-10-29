@@ -6,7 +6,6 @@ import { push as Menu } from 'react-burger-menu'
 
 import GlobalStyles from '../styles'
 import Home from './Home'
-import About from './About'
 import MenuClose from '../assets/icons/menu_close.svg'
 import MenuOpen from '../assets/icons/menu_open.svg'
 import MenuContent from './MenuContent'
@@ -37,8 +36,7 @@ export default props => (
 			<Provider store={{}}>
 				<HashRouter>
 					<Switch>
-						<Route exact path='/' component={ Home }/>
-						<Route exact path='/about' component={ About }/>
+						<Route exact path='/' component={ Home }/>						
 					</Switch>
 				</HashRouter>
 		</Provider>
