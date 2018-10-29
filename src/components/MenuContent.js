@@ -1,15 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
+import SimpleBar from 'simplebar-react'
+import 'simplebar/dist/simplebar.css'
 
 import Slider from './Slider'
 import Category from './Category'
 import { media } from '../styles/utils'
 import Logo from './Logo'
-
-const Container = styled.div`	
-	overflow-y: scroll;
-  height: 100%;
-`
 
 const Subtitle = styled.h4`
 	color: white;
@@ -20,7 +17,7 @@ const Subtitle = styled.h4`
 
 const Section = styled.section`
 	max-width: ${props => props.width ? props.width : '350px'};
-	padding-top: 24px;
+	padding: 12px 0;	
 	margin: 0 auto;
 `
 
@@ -44,7 +41,79 @@ const CategoryWrapper = styled.div`
 	`}
 `
 
+const LogoWrapper = styled.div`
+	text-align: center;
+	padding-top: 35px;
+`
 const categories = [
+	{
+		title: 'General',
+		color: '#f5bf27'
+	},
+	{
+		title: 'General',
+		color: '#f5bf27'
+	},
+	{
+		title: 'General',
+		color: '#f5bf27'
+	},
+	{
+		title: 'General',
+		color: '#f5bf27'
+	},
+	{
+		title: 'General',
+		color: '#f5bf27'
+	},
+	{
+		title: 'General',
+		color: '#f5bf27'
+	},
+	{
+		title: 'General',
+		color: '#f5bf27'
+	},
+	{
+		title: 'General',
+		color: '#f5bf27'
+	},
+	{
+		title: 'General',
+		color: '#f5bf27'
+	},
+	{
+		title: 'General',
+		color: '#f5bf27'
+	},
+	{
+		title: 'General',
+		color: '#f5bf27'
+	},
+	{
+		title: 'General',
+		color: '#f5bf27'
+	},
+	{
+		title: 'General',
+		color: '#f5bf27'
+	},
+	{
+		title: 'General',
+		color: '#f5bf27'
+	},
+	{
+		title: 'General',
+		color: '#f5bf27'
+	},
+	{
+		title: 'General',
+		color: '#f5bf27'
+	},
+	{
+		title: 'General',
+		color: '#f5bf27'
+	},
 	{
 		title: 'General',
 		color: '#f5bf27'
@@ -79,21 +148,16 @@ const categories = [
 	}
 ]
 
-class MenuContent extends React.Component {
-	state = {
-		itemSelected: 'Item1'
-	}
-
-	handleSelectDropdown = (item) => {
-		this.setState({
-			itemSelected: item.title
-		})
-	}
-
+class MenuContent extends React.Component {	
 	render() {
 		return (
-			<Container data-simplebar>
-				<Logo/>
+			<SimpleBar style={{
+				paddingRight: '14px',
+				paddingTop: '10px'				
+			}}>
+				<LogoWrapper>
+					<Logo/>
+				</LogoWrapper>
 				<Section>		
 					<Subtitle>Cubes</Subtitle>
 					<Slider/>
@@ -101,10 +165,7 @@ class MenuContent extends React.Component {
 				<Section>				
 				</Section>
 				<Section 
-					width='900px'
-					style={{				
-						height: '400px'
-					}}>
+					width='900px'>
 					<Subtitle>Categories</Subtitle>
 					<CategoriesWrapper>
 						{
@@ -112,7 +173,7 @@ class MenuContent extends React.Component {
 						}
 					</CategoriesWrapper>
 				</Section>
-			</Container>
+			</SimpleBar>
 		)
 	}
 }

@@ -55,7 +55,7 @@ export default createGlobalStyle`
   /* General sidebar styles */
   .bm-menu {
     background: #192c56;
-    padding: 90px 1.5em 0;
+    
     font-size: 1.15em;
     * {
       box-sizing: border-box;
@@ -71,7 +71,7 @@ export default createGlobalStyle`
   .bm-item-list {
     color: #b8b7ad;
     border: 1px solid black;
-    padding: 0.8em;    
+    padding-left: 14px;    
   }
 
   /* Individual item */
