@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import Slider from './Slider'
 import Category from './Category'
+import { media } from '../styles/utils'
 
 const Container = styled.div`	
 `
@@ -25,8 +26,14 @@ const CategoriesWrapper = styled.ul`
 `
 
 const CategoryWrapper = styled.div`
-	width: 33.3333%;
+	width: 100%;
 	padding: 5px;
+	${media.tablet`
+		width: 50%;
+	`}
+	${media.desktop`
+		width: 33.33333%;
+	`}
 `
 
 const categories = [
