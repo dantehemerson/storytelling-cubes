@@ -13,6 +13,7 @@ const Container = styled.div`
 	flex-direction: row;
 	${mediaHeight.tablet`
 		flex-direction: column;
+		justify-content: space-around;
 	`}
 	padding: 0 15px;
 	height: 100%;

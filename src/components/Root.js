@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import styled from 'styled-components'
 import { push as Menu } from 'react-burger-menu'
 
+import store from '../store'
 import GlobalStyles from '../styles'
 import Home from './Home'
 import MenuClose from '../assets/icons/menu_close.svg'
@@ -32,7 +33,7 @@ export default props => (
     </Menu>	
 		<GlobalStyles/>
 		<PageWrapper id='page-main'>
-			<Provider store={{}}>
+			<Provider store={ store }>
 				<HashRouter>
 					<Switch>
 						<Route exact path='/' component={ Home }/>						
