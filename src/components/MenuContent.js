@@ -109,7 +109,7 @@ class MenuContent extends React.Component {
 					<Info>Made with <span className='heart'>❤</span> by <a target='__blank' href='https://dantecalderon.com'>@dantehemerson</a>. Fork me on <a target='__blank' href='https://github.com/dantehemerson/storytelling-cubes'>Github</a>.</Info>
 				</LogoWrapper>
 				<Section>		
-					<Subtitle>Cubes</Subtitle>
+					<Subtitle>Cubes: 8</Subtitle>
 					<Slider/>
 				</Section>
 				<Section>				
