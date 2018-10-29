@@ -8,7 +8,7 @@ import Slider from './Slider'
 import Category from './Category'
 import { media } from '../styles/utils'
 import Logo from './Logo'
-import { updateCantityCubes } from '../actions'
+import { updateCantityCubes, toggleCategory } from '../actions'
 
 const Subtitle = styled.h4`
 	color: white;
@@ -64,41 +64,6 @@ const Info = styled.p`
 	}
 `
 
-const categories = [
-	{
-		title: 'General',
-		color: '#f5bf27'
-	},
-	{
-		title: 'Mistery',
-		color: '#fe842f'
-	},
-	{
-		title: 'Games',
-		color: '#ef492f'
-	},
-	{
-		title: '#ff0000s',
-		color: '#29bda3'
-	},
-	{
-		title: 'Hitvalley',
-		color: '#02795b'
-	},
-	{
-		title: 'Clock Tower',
-		color: '#feb912'
-	},
-	{
-		title: 'Fun',
-		color: '#73489f'
-	},
-	{
-		title: 'Instagram',
-		color: '#d21aab'
-	}
-]
-
 const MenuContent = props => (
 	<SimpleBar style={{
 		paddingRight: '14px',
@@ -121,9 +86,9 @@ const MenuContent = props => (
 			<Subtitle>Categories</Subtitle>
 			<CategoriesWrapper>
 				{
-					categories.map((item, id) => 
+					props.categories.map((item, id) => 
 						<CategoryWrapper key={id}>
-							<Category {...item}/>
+							<Category {...item} onClick={props.dispatchToggleCategory}/>
 						</CategoryWrapper>)
 				}
 			</CategoriesWrapper>
@@ -134,12 +99,14 @@ const MenuContent = props => (
 
 const mapStateToProps = state => {	
 	return {
-		cantityCubes: state.cantityCubes,		
+		cantityCubes: state.cantityCubes,
+		categories: state.categories	
 	}
 }
 
 const mapDispatchToProps = dispatch => ({	
-	dispatchUpdateCantityCubes: value => dispatch(updateCantityCubes(value))
+	dispatchUpdateCantityCubes: value => dispatch(updateCantityCubes(value)),
+	dispatchToggleCategory: id => dispatch(toggleCategory(id))
 })
 
 

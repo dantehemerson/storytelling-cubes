@@ -24,7 +24,8 @@ export default props => (
 	<Provider store={ store }>
 		<Container id='global-container'>
 			<Menu 			
-					right			
+					right		
+					isOpen	
 					customBurgerIcon={ <img alt='Menu Open' src={MenuOpen}/>}
 					customCrossIcon={ <img alt='Menu Close' src={MenuClose}/>}
 					width={ '100%' }
