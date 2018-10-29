@@ -12,10 +12,12 @@ const Subtitle = styled.h4`
 	color: white;
 	text-transform: uppercase;
 	text-align: center;
+	padding-bottom: 16px;
 `
 
 const Section = styled.section`
 	max-width: ${props => props.width ? props.width : '350px'};
+	padding-top: 24px;
 	margin: 0 auto;
 `
 
@@ -23,6 +25,9 @@ const CategoriesWrapper = styled.ul`
 	list-style: none;
 	display: flex;
 	flex-wrap: wrap;
+	background: white;
+	border-radius: 10px;
+	padding: 10px 6px;
 `
 
 const CategoryWrapper = styled.div`
