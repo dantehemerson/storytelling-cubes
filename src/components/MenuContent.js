@@ -29,31 +29,31 @@ const categories = [
 	},
 	{
 		title: 'Mistery',
-		color: 'blue'
+		color: '#fe842f'
 	},
 	{
 		title: 'Games',
-		color: 'blue'
+		color: '#ef492f'
 	},
 	{
-		title: 'Blues',
-		color: 'blue'
+		title: '#ff0000s',
+		color: '#29bda3'
 	},
 	{
 		title: 'Hitvalley',
-		color: 'blue'
+		color: '#02795b'
 	},
 	{
 		title: 'Clock Tower',
-		color: 'blue'
+		color: '#feb912'
 	},
 	{
 		title: 'Fun',
-		color: 'blue'
+		color: '#73489f'
 	},
 	{
 		title: 'Instagram',
-		color: 'blue'
+		color: '#d21aab'
 	}
 ]
 
