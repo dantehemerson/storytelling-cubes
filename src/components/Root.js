@@ -21,25 +21,25 @@ const PageWrapper = styled.main`
 `
 
 export default props => (
-	<Container id='global-container'>
-		<Menu 			
-			right			
-			customBurgerIcon={ <img alt='Menu Open' src={MenuOpen}/>}
-			customCrossIcon={ <img alt='Menu Close' src={MenuClose}/>}
-			width={ '100%' }
-			pageWrapId={'page-main'} 
-			outerContainerId={'global-container'}>
-	    <MenuContent/>
-    </Menu>	
-		<GlobalStyles/>
-		<PageWrapper id='page-main'>
-			<Provider store={ store }>
-				<HashRouter>
-					<Switch>
-						<Route exact path='/' component={ Home }/>						
-					</Switch>
-				</HashRouter>
-		</Provider>
-		</PageWrapper>
-	</Container>
+	<Provider store={ store }>
+		<Container id='global-container'>
+				<Menu 			
+					right			
+					customBurgerIcon={ <img alt='Menu Open' src={MenuOpen}/>}
+					customCrossIcon={ <img alt='Menu Close' src={MenuClose}/>}
+					width={ '100%' }
+					pageWrapId={'page-main'} 
+					outerContainerId={'global-container'}>
+			    <MenuContent/>
+		    </Menu>	
+				<GlobalStyles/>
+				<PageWrapper id='page-main'>
+						<HashRouter>
+							<Switch>
+								<Route exact path='/' component={ Home }/>						
+							</Switch>
+						</HashRouter>
+				</PageWrapper>
+		</Container>
+	</Provider>
 )
