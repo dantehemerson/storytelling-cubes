@@ -71,7 +71,7 @@ export default createGlobalStyle`
   .bm-item-list {
     color: #b8b7ad;
     border: 1px solid black;
-    padding: 0.8em;
+    padding: 0.8em;    
   }
 
   /* Individual item */

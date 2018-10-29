@@ -7,6 +7,8 @@ import { media } from '../styles/utils'
 import Logo from './Logo'
 
 const Container = styled.div`	
+	overflow-y: scroll;
+  height: 100%;
 `
 
 const Subtitle = styled.h4`
@@ -26,7 +28,7 @@ const CategoriesWrapper = styled.ul`
 	list-style: none;
 	display: flex;
 	flex-wrap: wrap;
-	background: white;
+	background: white;	
 	border-radius: 10px;
 	padding: 10px 6px;
 `
@@ -90,7 +92,7 @@ class MenuContent extends React.Component {
 
 	render() {
 		return (
-			<Container>
+			<Container data-simplebar>
 				<Logo/>
 				<Section>		
 					<Subtitle>Cubes</Subtitle>
