@@ -113,7 +113,7 @@ export default createGlobalStyle`
     text-align: center;
     position: absolute;
     background-color: #fe6c53;    
-    font-size: 16px;
+    font-size: 17px;
     transition: all .3 ease-in;
     border-radius: 30px 30px;
     display: inline-block;
@@ -136,8 +136,8 @@ export default createGlobalStyle`
   * Rangeslider - Horizontal slider
   */
   .rangeslider-horizontal {
-    height: 8px;
-    border-radius: 10px;
+    height: 7px;
+    border-radius: 5rem;
   }
   .rangeslider-horizontal .rangeslider__fill {
     height: 100%;
@@ -146,11 +146,11 @@ export default createGlobalStyle`
     top: 0;
   }
   .rangeslider-horizontal .rangeslider__handle {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
     top: 50%;
-    transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-48%, -50%, 0);
   }
   .rangeslider-horizontal .rangeslider__handle:after {
     //content: ' ';
@@ -167,12 +167,12 @@ export default createGlobalStyle`
     top: -55px;
   }
   .rangeslider-horizontal .rangeslider__handle-tooltip:after {
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-top: 8px solid rgba(0, 0, 0, 0.8);
+    border-left: 17px solid transparent;
+    border-right: 17px solid transparent;
+    border-top: 17px solid #fe6c53;
     left: 50%;
-    bottom: -8px;
-    transform: translate3d(-50%, 0, 0);
+    bottom: -9px;
+    transform: translate3d(-52%, 0, 0);
   }
   /**
   * Rangeslider - Vertical slider
