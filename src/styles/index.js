@@ -88,7 +88,7 @@ export default createGlobalStyle`
   .rangeslider {
     margin: 20px 0;
     position: relative;
-    background: #e6e6e6;
+    background: #263c6b;
     -ms-touch-action: none;
     touch-action: none;
   }
