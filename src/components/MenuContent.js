@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Slider from './Slider'
 import Category from './Category'
 import { media } from '../styles/utils'
+import Logo from './Logo'
 
 const Container = styled.div`	
 `
@@ -76,23 +77,42 @@ const categories = [
 	}
 ]
 
-export default props => (
-	<Container>
-		<Section>		
-			<Subtitle>Cubes</Subtitle>
-			<Slider/>
-		</Section>
-		<Section 
-			width='900px'
-			style={{				
-				height: '400px'
-			}}>
-			<Subtitle>Categories</Subtitle>
-			<CategoriesWrapper>
-				{
-					categories.map((item, id) => <CategoryWrapper><Category {...item}/></CategoryWrapper>)
-				}
-			</CategoriesWrapper>
-		</Section>
-	</Container>
-)
+class MenuContent extends React.Component {
+	state = {
+		itemSelected: 'Item1'
+	}
+
+	handleSelectDropdown = (item) => {
+		this.setState({
+			itemSelected: item.title
+		})
+	}
+
+	render() {
+		return (
+			<Container>
+				<Logo/>
+				<Section>		
+					<Subtitle>Cubes</Subtitle>
+					<Slider/>
+				</Section>
+				<Section>				
+				</Section>
+				<Section 
+					width='900px'
+					style={{				
+						height: '400px'
+					}}>
+					<Subtitle>Categories</Subtitle>
+					<CategoriesWrapper>
+						{
+							categories.map((item, id) => <CategoryWrapper><Category {...item}/></CategoryWrapper>)
+						}
+					</CategoriesWrapper>
+				</Section>
+			</Container>
+		)
+	}
+}
+
+export default MenuContent

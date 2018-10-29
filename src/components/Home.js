@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-import Dropdown from './Dropdown'
 import Toolbar from './Toolbar'
 import Table from './Table'
 import Logo from './Logo'
@@ -23,29 +22,11 @@ const Divisor = styled.div`
 `
 
 class Home extends React.Component {
-	state = {
-		itemSelected: 'hoa'
-	}
-
-	handleSelectDropdown = (item) => {
-		this.setState({
-			itemSelected: item.title
-		})
-	}
-
 	render() {
 		return(
 			<Container>
 				<Logo/>								
-				<Divisor>
-					<Dropdown
-						onSelect={ this.handleSelectDropdown }
-						list={[
-							{ id: 1, title: 'Item1', key: 'item1' },
-							{ id: 2, title: 'Item2', key: 'item2' },
-							{ id: 4, title: 'Item4', key: 'item4' },
-							{ id: 3, title: 'Item3', key: 'item3' }
-						]}/>					
+				<Divisor>									
 					<Table/>
 					<Toolbar/>
 				</Divisor>
