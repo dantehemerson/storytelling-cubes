@@ -9,8 +9,8 @@ const Container = styled.div`
 	background: #0e1d3e;
 	display: grid;
 	img {		
-		width: 100%;		
-		background: yellow;
+		width: 100%;				
+		border: 1px solid yellow;
 	}
 `
 
