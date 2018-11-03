@@ -9,10 +9,7 @@ const Container = styled.div`
 	justify-content: center;
 `
 export default props => (
-	<Container>
-		{
-			console.log(props)
-		}
-		<img alt={`Dice ${props.front}`} src={`/static/icons/dado${props.front}.png`}/>	
+	<Container>		
+		<img alt={`Dice ${props.front}`} src={`/static/icons/dado${props.items[props.front]}.png`}/>	
 	</Container>
 )

@@ -17,6 +17,9 @@ const Container = styled.div`
 const CubesContainer = styled.div`
 	position: absolute;
 	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
 	width: 100%;
 	height: 100%;
 
