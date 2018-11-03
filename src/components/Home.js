@@ -45,20 +45,18 @@ const ToolbarWrapper = styled.div`
 `
 class Home extends React.Component {
 	render() {
+		const { cubes } = this.props
 		return(
 			<Container>
 				<LogoWrapper>			
 					<Logo/>			
 				</LogoWrapper>					
 				<Divisor>									
-					<Table/>
+					<Table cubes={cubes}/>
 				</Divisor>
 				<ToolbarWrapper>
 					<Toolbar/>
-				</ToolbarWrapper>
-				{
-					console.log(this.props)
-				}
+				</ToolbarWrapper>				
 			</Container>
 		)
 	}
