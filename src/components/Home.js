@@ -1,10 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
+import { connect } from 'react-redux'
 
 import Toolbar from './Toolbar'
 import Table from './Table'
 import Logo from './Logo'
 import { mediaHeight } from '../styles/utils'
+import { generateRandomCubes } from '../actions'
 
 const Container = styled.div`
 	display: flex;
@@ -54,9 +56,27 @@ class Home extends React.Component {
 				<ToolbarWrapper>
 					<Toolbar/>
 				</ToolbarWrapper>
+				{
+					console.log(this.props)
+				}
 			</Container>
 		)
 	}
 }
 
-export default Home
+
+const mapStateToProps = state => {	
+	return {
+		cubes: state.cubes		
+	}
+}
+
+const mapDispatchToProps = dispatch => ({		
+	dispatchGenerateRandomCubes: cubes => dispatch(generateRandomCubes(cubes))
+})
+
+
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(Home)
