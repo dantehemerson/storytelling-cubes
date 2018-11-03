@@ -1,6 +1,14 @@
 import { combineReducers } from 'redux'
 
-import { cantityCubesActions, categoryActions } from '../actions'
+import { 
+	cantityCubesActions, 
+	categoryActions,
+	cubesActions
+} from '../actions'
+
+import { getRandomArray } from '../utils'
+
+const TOTAL_IMAGES = 108
 
 const categories = [
 	{
@@ -71,7 +79,7 @@ const categoryReducer = (state=categories, action) => {
 	}
 }
 
-const cantityCubesReducer = (state=4, action) => {
+const cantityCubesReducer = (state=3, action) => {
 	if(action.type === cantityCubesActions.UPDATE) {
 		return action.cantity
 	}
@@ -79,7 +87,30 @@ const cantityCubesReducer = (state=4, action) => {
 }
 
 
+const cubes = [
+	{ items: [0, 1, 2, 3, 4, 5], front: 1 },
+	{ items: [6, 7, 8, 9, 10, 11], front: 4 },
+	{ items: [12, 13, 14, 15, 16, 17], front: 1 }	
+]
+
+const randomCubesReducer = (state=cubes, action) => {
+	if(action.type === cubesActions.GENERATE_RANDOM_CUBES) {
+		let newCubes = []
+		const randomCubes = getRandomArray(0, TOTAL_IMAGES, action.cubes * 6)
+		for(let i = 0; i < action.cubes; i++)	{
+			newCubes.push({
+				item: randomCubes.slice(i, i + 6),
+				front: Math.floor(Math.random() * 5)
+			})
+		}
+		return newCubes
+	}
+	return state
+}
+
+
 export default combineReducers({
 	cantityCubes: cantityCubesReducer,
-	categories: categoryReducer
+	categories: categoryReducer,
+	cubes: randomCubesReducer
 })
