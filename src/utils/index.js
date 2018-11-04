@@ -11,3 +11,8 @@ export const getRandomArray = (min, max, len) => {
 	}
 	return nums
 }
+
+export const beautyDate = () => {
+	const d = new Date()
+	return `${d.getMonth()}_${d.getDate()}_${d.getHours()}-${d.getMinutes()}-${d.getSeconds()}-${d.getMilliseconds()}`
+}

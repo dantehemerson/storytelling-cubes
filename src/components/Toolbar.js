@@ -4,7 +4,9 @@ import html2canvas from 'html2canvas'
 
 import DicesImage from '../assets/icons/dices.svg'
 import VolumeOn from '../assets/icons/volume.svg'
+import cameraImage from '../assets/icons/camera.svg'
 import { mediaHeight } from '../styles/utils'
+import { beautyDate } from '../utils'
 
 const Container = styled.div`
 	background: #263c6b;	
@@ -41,7 +43,7 @@ const Item = styled.li`
 `
 
 function download(canvas) {  
-	const filename = 'cubes-storytelling.png'
+	const filename = `storytelling-cubes-${beautyDate()}.png`
   var lnk = document.createElement('a'), e;  
   lnk.download = filename;
   lnk.href = canvas.toDataURL("image/png;base64");  
@@ -79,7 +81,7 @@ export default props => (
 						})
 					}
 				} 
-				alt='Random' src={ DicesImage }/>
+				alt='Random' src={ cameraImage }/>
 			</Item>
 		</Items>
 	</Container>
