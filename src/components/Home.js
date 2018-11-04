@@ -51,7 +51,7 @@ class Home extends React.Component {
 				<LogoWrapper>			
 					<Logo/>			
 				</LogoWrapper>					
-				<Divisor>									
+				<Divisor id='cubes'>									
 					<Table cubes={cubes}/>
 				</Divisor>
 				<ToolbarWrapper>
