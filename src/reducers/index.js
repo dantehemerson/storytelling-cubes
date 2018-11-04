@@ -8,7 +8,7 @@ import {
 
 import { getRandomArray } from '../utils'
 
-const TOTAL_IMAGES = 108
+const TOTAL_IMAGES = 106
 
 const categories = [
 	{
@@ -21,37 +21,37 @@ const categories = [
 		id: 'mistery',
 		title: 'Mistery',
 		color: '#fe842f',
-		selected: false
+		selected: true
 	},
 	{
 		id: 'games',
 		title: 'Games',
 		color: '#ef492f',
-		selected: false
+		selected: true
 	},
 	{
 		id: 'ostia',
 		title: 'Ostia pvta',
 		color: '#29bda3',
-		selected: false
+		selected: true
 	},
 	{
 		id: 'hitvalley',
 		title: 'Hitvalley',
 		color: '#02795b',
-		selected: false
+		selected: true
 	},
 	{
 		id: 'clock_tower',
 		title: 'Clock Tower',
 		color: '#feb912',
-		selected: false
+		selected: true
 	},
 	{
 		id: 'fun',
 		title: 'Fun',
 		color: '#73489f',
-		selected: false
+		selected: true
 	},
 	{
 		id: 'instagram',
@@ -79,7 +79,7 @@ const categoryReducer = (state=categories, action) => {
 	}
 }
 
-const cantityCubesReducer = (state=6, action) => {
+const cantityCubesReducer = (state=9, action) => {
 	if(action.type === cantityCubesActions.UPDATE) {
 		return action.cantity
 	}
@@ -88,7 +88,7 @@ const cantityCubesReducer = (state=6, action) => {
 
 
 const cubes = [
-	{ items: [0, 1, 2, 3, 4, 5], front: 1 },
+	{ items: [54, 1, 2, 3, 4, 5], front: 1 },
 	{ items: [6, 7, 8, 9, 10, 11], front: 4 },
 	{ items: [12, 13, 14, 15, 16, 17], front: 5 },
 	{ items: [18, 19, 20, 21, 22, 23], front: 3 },
@@ -102,10 +102,10 @@ const cubes = [
 const randomCubesReducer = (state=cubes, action) => {
 	if(action.type === cubesActions.GENERATE_RANDOM_CUBES) {
 		let newCubes = []
-		const randomCubes = getRandomArray(0, TOTAL_IMAGES, action.cubes * 6)
+		const randomCubes = getRandomArray(0, TOTAL_IMAGES, action.cubes * 6)		
 		for(let i = 0; i < action.cubes; i++)	{
 			newCubes.push({
-				item: randomCubes.slice(i, i + 6),
+				items: randomCubes.slice(i * 6, (i * 6) + 6),
 				front: Math.floor(Math.random() * 5)
 			})
 		}

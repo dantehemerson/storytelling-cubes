@@ -50,8 +50,8 @@ export default props => (
 
 				}}/>
 			</Item>
-			<Item>
-				<img alt='Random' src={ DicesImage }/>
+			<Item>			
+				<img onClick={() => props.generate(props.cantity)} alt='Random' src={ DicesImage }/>
 			</Item>
 			<Item>
 				<img alt='Random' src={ DicesImage }/>

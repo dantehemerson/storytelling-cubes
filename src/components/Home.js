@@ -45,7 +45,7 @@ const ToolbarWrapper = styled.div`
 `
 class Home extends React.Component {
 	render() {
-		const { cubes } = this.props
+		const { cubes, dispatchGenerateRandomCubes, cantityCubes } = this.props
 		return(
 			<Container>
 				<LogoWrapper>			
@@ -55,7 +55,9 @@ class Home extends React.Component {
 					<Table cubes={cubes}/>
 				</Divisor>
 				<ToolbarWrapper>
-					<Toolbar/>
+					<Toolbar
+						cantity={cantityCubes}
+						generate={dispatchGenerateRandomCubes}/>
 				</ToolbarWrapper>				
 			</Container>
 		)
@@ -65,7 +67,8 @@ class Home extends React.Component {
 
 const mapStateToProps = state => {	
 	return {
-		cubes: state.cubes		
+		cubes: state.cubes,
+		cantityCubes: state.cantityCubes	
 	}
 }
 
