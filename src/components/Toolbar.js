@@ -70,7 +70,6 @@ export default props => (
 					width: '30px',
 					height: '30px',
 					padding: '16px'
-
 				}}/>
 			</Item>
 			<Item>			
