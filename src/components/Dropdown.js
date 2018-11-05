@@ -68,7 +68,7 @@ class Dropdown extends React.Component {
 
 	render() {
 		const { list } = this.props		
-		return (
+		return (			
 			<Wrapper>
 				<Header onClick={ this.toggleList }>
 					<Title>{ this.state.title }</Title>
