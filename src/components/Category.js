@@ -3,8 +3,9 @@ import styled from 'styled-components'
 import { darken } from 'polished'
 
 const Container = styled.li`
-	background: ${props => props.color && props.selected ? props.color : '#929292'};
-	border: 2px solid ${ props => props.color && props.selected ? darken(0.03, props.color) : '#8c8c8c' };
+	background: ${props => props.color};
+	border: 2px solid ${ props => darken(0.03, props.color) };
+	opacity: ${props => props.selected ? '1' : '.5'};
 	color: white;
 	cursor: pointer;
 	padding: 9px 15px;	

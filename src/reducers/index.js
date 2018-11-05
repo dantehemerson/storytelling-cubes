@@ -13,8 +13,8 @@ const TOTAL_IMAGES = 106
 
 const categories = [
 	{
-		id: 'general',
-		title: 'General',
+		id: 'horror',
+		title: 'Horror',
 		color: '#f5bf27',
 		selected: true
 	},
@@ -31,34 +31,40 @@ const categories = [
 		selected: true
 	},
 	{
-		id: 'ostia',
-		title: 'Ostia pvta',
+		id: 'movies',
+		title: 'Movies',
 		color: '#29bda3',
 		selected: true
 	},
 	{
-		id: 'hitvalley',
-		title: 'Hitvalley',
+		id: 'animals',
+		title: 'Animals',
 		color: '#02795b',
 		selected: true
 	},
 	{
-		id: 'clock_tower',
-		title: 'Clock Tower',
+		id: 'science',
+		title: 'Science',
 		color: '#feb912',
 		selected: true
 	},
 	{
-		id: 'fun',
-		title: 'Fun',
+		id: 'sports',
+		title: 'Sports',
 		color: '#73489f',
 		selected: true
 	},
 	{
-		id: 'instagram',
-		title: 'Instagram',
+		id: 'history',
+		title: 'History',
 		color: '#d21aab',
-		selected: false
+		selected: true
+	},
+	{
+		id: 'mythic',
+		title: 'Mythic',
+		color: '#795548',
+		selected: true
 	}
 ]
 
