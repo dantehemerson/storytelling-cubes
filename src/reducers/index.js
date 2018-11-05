@@ -3,7 +3,8 @@ import { combineReducers } from 'redux'
 import { 
 	cantityCubesActions, 
 	categoryActions,
-	cubesActions
+	cubesActions,
+	soundActions
 } from '../actions'
 
 import { getRandomArray } from '../utils'
@@ -114,9 +115,17 @@ const randomCubesReducer = (state=cubes, action) => {
 	return state
 }
 
+const soundReducer = (state=false, action) => {
+	if(action.type === soundActions.TOGGLE_SOUND) {
+		return !state
+	}
+	return state
+}
+
 
 export default combineReducers({
 	cantityCubes: cantityCubesReducer,
 	categories: categoryReducer,
-	cubes: randomCubesReducer
+	cubes: randomCubesReducer,
+	sound: soundReducer
 })

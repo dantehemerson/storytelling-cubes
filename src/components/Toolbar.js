@@ -4,6 +4,7 @@ import html2canvas from 'html2canvas'
 
 import DicesImage from '../assets/icons/dices.svg'
 import VolumeOn from '../assets/icons/volume.svg'
+import VolumeOff from '../assets/icons/mute.svg'
 import cameraImage from '../assets/icons/camera.svg'
 import { mediaHeight } from '../styles/utils'
 import { beautyDate } from '../utils'
@@ -63,7 +64,9 @@ export default props => (
 	<Container>
 		<Items>
 			<Item>
-				<img alt='Random' src={ VolumeOn } style={{
+				<img 
+					onClick={() => props.toggleSound()} 
+					alt='Random' src={ props.sound ? VolumeOn : VolumeOff } style={{
 					width: '30px',
 					height: '30px',
 					padding: '16px'

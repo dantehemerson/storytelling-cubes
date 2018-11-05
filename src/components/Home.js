@@ -6,7 +6,7 @@ import Toolbar from './Toolbar'
 import Table from './Table'
 import Logo from './Logo'
 import { mediaHeight } from '../styles/utils'
-import { generateRandomCubes } from '../actions'
+import { generateRandomCubes, toggleSound } from '../actions'
 
 const Container = styled.div`
 	display: flex;
@@ -45,7 +45,13 @@ const ToolbarWrapper = styled.div`
 `
 class Home extends React.Component {
 	render() {
-		const { cubes, dispatchGenerateRandomCubes, cantityCubes } = this.props
+		const { 
+			cubes, 
+			sound, 
+			dispatchGenerateRandomCubes,
+			dispatchToggleSound,
+			cantityCubes
+		} = this.props
 		return(
 			<Container>
 				<LogoWrapper>			
@@ -56,6 +62,8 @@ class Home extends React.Component {
 				</Divisor>
 				<ToolbarWrapper>
 					<Toolbar
+						sound={sound}
+						toggleSound={dispatchToggleSound}
 						cantity={cantityCubes}
 						generate={dispatchGenerateRandomCubes}/>
 				</ToolbarWrapper>				
@@ -68,12 +76,14 @@ class Home extends React.Component {
 const mapStateToProps = state => {	
 	return {
 		cubes: state.cubes,
-		cantityCubes: state.cantityCubes	
+		cantityCubes: state.cantityCubes,
+		sound: state.sound
 	}
 }
 
 const mapDispatchToProps = dispatch => ({		
-	dispatchGenerateRandomCubes: cubes => dispatch(generateRandomCubes(cubes))
+	dispatchGenerateRandomCubes: cubes => dispatch(generateRandomCubes(cubes)),
+	dispatchToggleSound: () => dispatch(toggleSound())
 })
 
 

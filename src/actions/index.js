@@ -8,7 +8,7 @@ export const updateCantityCubes = cantity => ({
 })
 
 export const categoryActions = {
-	TOGGLE_CATEGORY: 'TOGGLE_CATEGORY'	
+	TOGGLE_CATEGORY: 'TOGGLE_CATEGORY'
 }
 
 export const toggleCategory = id => ({
@@ -23,4 +23,12 @@ export const cubesActions = {
 export const generateRandomCubes = (cubes) => ({
 	type: cubesActions.GENERATE_RANDOM_CUBES,
 	cubes
+})
+
+export const soundActions = {
+	TOGGLE_SOUND: 'TOGGLE_SOUND'
+}
+
+export const toggleSound = () => ({
+	type: soundActions.TOGGLE_SOUND
 })
