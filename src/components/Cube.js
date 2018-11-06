@@ -7,6 +7,12 @@ const Container = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	padding: 2%;
+	box-sizing: border-box;
+	img {
+		width: 100%;
+		height: 100%;		
+	}
 `
 export default props => (
 	<Container>		
